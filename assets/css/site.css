@@ -349,6 +349,21 @@ dl.facts .wide{grid-column:1 / -1; padding-top:12px; border-top:1px solid var(--
 .foot-nav a:hover{color:var(--gold-bright); text-decoration:underline;}
 .foot-bottom{padding-top:16px;}
 .site-footer .credits{margin-top:8px;}
+/* Our People: Advisory Board and Emeritus show five members across */
+.people.board{grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px;}
+.people.board .person{padding:20px 16px;}
+@media (max-width:1000px){ .people.board{grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media (max-width:600px){ .people.board{grid-template-columns:repeat(2,minmax(0,1fr));} }
+/* Longer menu labels: keep the main nav on one line down to the mobile breakpoint */
+@media (min-width:1001px) and (max-width:1120px){ .brand img{height:26px;} .primary-nav ul{gap:0;} .primary-nav a{padding:10px 5px; font-size:0.82rem;} .primary-nav a.nav-give{padding:10px 8px;} }
+/* Corporate Partnerships Program */
+.split h2.h2{font-size:clamp(1.75rem,3.4vw,2.6rem); margin-top:10px;}
+.split figure{margin-top:8px;}
+.split figure img{max-width:420px; width:100%;}
+.cards.questions h3{font-style:italic; font-weight:700; margin-top:0;}
+ul.spark-list{list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:6px; max-width:62ch;}
+ul.spark-list li{position:relative; padding-left:26px; color:var(--text);}
+ul.spark-list li::before{content:"\2726"; position:absolute; left:0; top:0; color:var(--text);}
 /* Compact banners and hero: only as tall as their text */
 .banner .wrap{padding-top:clamp(36px,5vw,56px); padding-bottom:clamp(36px,5vw,56px);}
 .hero{min-height:0;}
